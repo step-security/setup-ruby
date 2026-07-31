@@ -14,6 +14,9 @@ on:
         description: "Script to build/bundle the action"
         required: false
         default: "yarn package"
+      yarn_version:
+        required: false
+        type: string
 
 permissions:
   contents: read
@@ -30,3 +33,4 @@ jobs:
       tag: "${{ github.event.inputs.tag }}"
       node_version: ${{ inputs.node_version || '24' }}
       script: ${{ inputs.script || 'yarn package' }}
+      yarn_version: ${{ inputs.yarn_version || '4.15.0' }}
