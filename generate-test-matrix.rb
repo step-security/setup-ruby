@@ -68,9 +68,7 @@ matrix += windows_x64_runners.product(ruby_loco_versions)
 asan_versions = %w[asan-release asan]
 matrix += asan_runners.sort.last(1).product(asan_versions)
 
-# https://github.com/ruby/setup-ruby/pull/596#discussion_r1606047680
 matrix -= (ubuntu_runners - %w[ubuntu-22.04]).product(%w[1.9])
-# https://github.com/ruby/setup-ruby/issues/496
 matrix -= ubuntu_runners.product(%w[2.2])
 # These old Rubies fail to compile on macOS arm64
 matrix -= macos_arm64_runners.product(%w[1.9 2.0 2.1 2.2 2.3 2.4 2.5])

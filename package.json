@@ -1,6 +1,6 @@
 {
   "name": "setup-ruby",
-  "version": "0.1.0",
+  "version": "1.321.0",
   "description": "Download a prebuilt Ruby and add it to the PATH in 5 seconds",
   "main": "index.js",
   "license": "MIT",
@@ -9,24 +9,26 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ruby/setup-ruby.git"
+    "url": "git+https://github.com/step-security/setup-ruby.git"
   },
   "keywords": [
     "GitHub",
     "Actions",
     "Ruby"
   ],
-  "author": "Benoit Daloze",
+  "packageManager": "yarn@4.15.0",
+  "author": "step-security",
   "bugs": {
-    "url": "https://github.com/ruby/setup-ruby/issues"
+    "url": "https://github.com/step-security/setup-ruby/issues"
   },
-  "homepage": "https://github.com/ruby/setup-ruby",
+  "homepage": "https://github.com/step-security/setup-ruby#readme",
   "dependencies": {
-    "@actions/cache": "^5.0.3",
+    "@actions/cache": "^5.2.0",
     "@actions/core": "^2.0.2",
     "@actions/exec": "^2.0.0",
     "@actions/io": "^2.0.0",
     "@actions/tool-cache": "^3.0.0",
+    "axios": "^1.18.0",
     "linux-os-info": "^2.0.0",
     "semver": "^7.7.3"
   },

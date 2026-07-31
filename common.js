@@ -11,7 +11,6 @@ const { performance } = require('perf_hooks')
 const linuxOSInfo = require('linux-os-info')
 
 export const windows = (os.platform() === 'win32')
-// Extract to SSD on Windows, see https://github.com/ruby/setup-ruby/pull/14
 export const drive = (windows ? (process.env['RUNNER_TEMP'] || 'C')[0] : undefined)
 const PATH_ENV_VAR = windows ? 'Path' : 'PATH'
 

@@ -32,7 +32,7 @@ export async function rubygemsUpdate(rubygemsVersionInput, rubyPrefix, platform,
 
 // Older RubyGems versions do not account for 'required_ruby_version' when
 // running 'gem update --system', so we have to force a compatible version of
-// rubygems-update.  See https://github.com/ruby/setup-ruby/pull/551 and
+// rubygems-update.
 // https://github.com/rubygems/rubygems/issues/7329
 async function rubygemsLatest(gem, platform, engine, rubyVersion) {
   if (engine === 'ruby') {

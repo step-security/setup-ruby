@@ -78,7 +78,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v6
+    - uses: actions/checkout@v7
     - uses: step-security/setup-ruby@v1
       with:
         ruby-version: '4.0' # Not needed with a .ruby-version, .tool-versions or mise.toml
@@ -103,7 +103,7 @@ jobs:
         ruby: ['3.3', '3.4', '4.0', head, jruby, jruby-head, truffleruby, truffleruby-head]
     runs-on: ${{ matrix.os }}
     steps:
-    - uses: actions/checkout@v6
+    - uses: actions/checkout@v7
     - uses: step-security/setup-ruby@v1
       with:
         ruby-version: ${{ matrix.ruby }}
@@ -126,7 +126,7 @@ jobs:
     env: # $BUNDLE_GEMFILE must be set at the job level, so it is set for all steps
       BUNDLE_GEMFILE: ${{ github.workspace }}/gemfiles/${{ matrix.gemfile }}.gemfile
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - uses: step-security/setup-ruby@v1
         with:
           ruby-version: '4.0'
@@ -292,15 +292,3 @@ You could of course also not use this action and e.g. use Ruby from a system pac
 
 See also the [`self-hosted:` input](action.yml).
 You can set it to `true` if you want to use custom-built Rubies in your self-hosted toolcache instead of prebuild Rubies.
-
-## History
-
-This action used to be at `eregon/use-ruby-action` and was moved to the `ruby` organization.
-Please [update](https://github.com/step-security/setup-ruby/releases/tag/v1.13.0) if you are using `eregon/use-ruby-action`.
-
-## Credits
-
-The creator of this action is @eregon.
-The current maintainers are @eregon @MSP-Greg @ntkme.
-Most of the Windows logic is based on work by MSP-Greg.
-Many thanks to MSP-Greg and Lars Kanis for the help with Ruby Installer.

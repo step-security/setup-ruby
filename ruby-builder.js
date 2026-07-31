@@ -78,7 +78,7 @@ async function downloadAndExtract(platform, engine, version, rubyPrefix) {
     } catch (error) {
       if (error.message.includes('404')) {
         throw new Error(`Unavailable version ${version} for ${engine} on ${platform}
-          You can request it at https://github.com/ruby/setup-ruby/issues
+          You can request it at https://github.com/step-security/setup-ruby/issues
           Cause: ${error.message}`)
       } else {
         throw error
