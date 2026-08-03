@@ -26,6 +26,7 @@ on:
       yarn_version:
         required: false
         type: string
+        default: "4.15.0"
   schedule:
     - cron: "0 0 * * 1"
 
