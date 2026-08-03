@@ -31,6 +31,7 @@ on:
       yarn_version:
         required: false
         type: string
+        default: "4.15.0"
 
   pull_request:
     types: [ opened, synchronize, labeled ]
