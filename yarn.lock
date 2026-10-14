@@ -284,6 +284,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@step-security/setup-ruby@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@step-security/setup-ruby@workspace:."
+  dependencies:
+    "@actions/cache": "npm:^5.2.0"
+    "@actions/core": "npm:^2.0.2"
+    "@actions/exec": "npm:^2.0.0"
+    "@actions/io": "npm:^2.0.0"
+    "@actions/tool-cache": "npm:^3.0.0"
+    "@vercel/ncc": "npm:^0.38.3"
+    axios: "npm:^1.20.0"
+    linux-os-info: "npm:^2.0.0"
+    semver: "npm:^7.7.3"
+  languageName: unknown
+  linkType: soft
+
 "@typespec/ts-http-runtime@npm:^0.3.0":
   version: 0.3.2
   resolution: "@typespec/ts-http-runtime@npm:0.3.2"
@@ -357,7 +373,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:^1.18.0":
+"axios@npm:^1.20.0":
   version: 1.20.0
   resolution: "axios@npm:1.20.0"
   dependencies:
@@ -832,22 +848,6 @@ __metadata:
   checksum: 10c0/b1f3127a5be8125a94f37188b361c212466c292c6910adce3ec106cff5dc211ccaedc4739c11bb70fda59d6fc1f040a9bca289f4e093451521a2372e5231fe0c
   languageName: node
   linkType: hard
-
-"setup-ruby@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "setup-ruby@workspace:."
-  dependencies:
-    "@actions/cache": "npm:^5.2.0"
-    "@actions/core": "npm:^2.0.2"
-    "@actions/exec": "npm:^2.0.0"
-    "@actions/io": "npm:^2.0.0"
-    "@actions/tool-cache": "npm:^3.0.0"
-    "@vercel/ncc": "npm:^0.38.3"
-    axios: "npm:^1.18.0"
-    linux-os-info: "npm:^2.0.0"
-    semver: "npm:^7.7.3"
-  languageName: unknown
-  linkType: soft
 
 "strnum@npm:^2.4.1":
   version: 2.4.1
