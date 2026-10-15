@@ -1,6 +1,7 @@
 {
-  "name": "setup-ruby",
-  "version": "1.321.0",
+  "name": "@step-security/setup-ruby",
+  "private": true,
+  "version": "1.329.0",
   "description": "Download a prebuilt Ruby and add it to the PATH in 5 seconds",
   "main": "index.js",
   "license": "MIT",
@@ -18,6 +19,7 @@
   ],
   "packageManager": "yarn@4.15.0",
   "author": "step-security",
+  "publisher": "step-security",
   "bugs": {
     "url": "https://github.com/step-security/setup-ruby/issues"
   },
@@ -28,11 +30,14 @@
     "@actions/exec": "^2.0.0",
     "@actions/io": "^2.0.0",
     "@actions/tool-cache": "^3.0.0",
-    "axios": "^1.18.0",
+    "axios": "^1.20.0",
     "linux-os-info": "^2.0.0",
     "semver": "^7.7.3"
   },
   "devDependencies": {
     "@vercel/ncc": "^0.38.3"
+  },
+  "engines": {
+    "node": ">=24"
   }
 }
