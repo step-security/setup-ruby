@@ -288,7 +288,12 @@ jobs:
     name: "Test rubygems: beta version upgrades RubyGems to that version if the default is older"
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v7
+    - name: Harden the runner (Audit all outbound calls)
+      uses: step-security/harden-runner@v2
+      with:
+        egress-policy: audit
+
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
     - uses: ./
       with:
         ruby-version: '4.0.7'
@@ -299,7 +304,12 @@ jobs:
     name: "Test rubygems: beta version noops if the default is newer"
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v7
+    - name: Harden the runner (Audit all outbound calls)
+      uses: step-security/harden-runner@v2
+      with:
+        egress-policy: audit
+
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
     - uses: ./
       with:
         ruby-version: '4.0.7'
@@ -460,7 +470,12 @@ jobs:
     name: "Test using setup-ruby twice in the same job"
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v7
+      - name: Harden the runner (Audit all outbound calls)
+        uses: step-security/harden-runner@v2
+        with:
+          egress-policy: audit
+
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - uses: ./
         env:
           BUNDLE_GEMFILE: ${{ github.workspace }}/gemfiles/bundler1.gemfile
@@ -585,5 +600,10 @@ jobs:
       - validate-windows-versions
       - check-dist-index
     steps:
+      - name: Harden the runner (Audit all outbound calls)
+        uses: step-security/harden-runner@v2
+        with:
+          egress-policy: audit
+
       - run: exit 1
         if: ${{ contains(needs.*.result, 'failure') || contains(needs.*.result, 'cancelled') }}
